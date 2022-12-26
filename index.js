@@ -9,6 +9,9 @@ const PORT = process.env.PORT;
 //Connecting to DB
 connectDB();
 //MainRouter
+app.use("/", (req, res) => {
+  res.send("Hit /api/v1/user To get the API Response.");
+});
 app.use("/api/v1", Router);
 
 //Listing Port
