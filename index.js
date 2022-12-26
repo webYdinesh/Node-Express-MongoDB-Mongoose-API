@@ -12,7 +12,7 @@ connectDB();
 app.use("/", (req, res) => {
   res.send("<h1>Hit /api/v1/user To get the API Response.</h1>");
 });
-app.use("/api/v1", Router);
+app.route("/api/v1", Router);
 
 //Listing Port
 app.listen(PORT, () => {
